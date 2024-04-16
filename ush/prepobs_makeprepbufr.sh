@@ -1013,9 +1013,9 @@ pgmout=${pgmout:-/dev/null}
 tstsp=${tstsp:-/tmp/null/}
 tmmark=${tmmark:-tm00}
 
-BUFRLIST=${BUFRLIST:-"uprair proflr aircar aircft satwnd adpupa adpsfc \
- sfcshp sfcbog vadwnd goesnd spssmi erscat qkswnd msonet gpsipw rassda \
- wdsatr ascatw"}
+BUFRLIST=${BUFRLIST:-"uprair adpupa proflr aircar aircft satwnd adpsfc \
+ sfcshp saldrn sfcbog vadwnd goesnd spssmi erscat qkswnd msonet gpsipw \
+ rassda wdsatr ascatw"}
 
 PREPDATA=${PREPDATA:-YES}
 
@@ -1914,9 +1914,10 @@ set -u
 echo " &task mp_process=$multi /" >>prepdata.stdin
 cat $DATA/prepdata.stdin >> prepdata.stdin
 
-BUFRLIST_all="uprair aircar aircft satwnd proflr vadwnd rassda adpupa adpsfc \
- sfcshp sfcbog msonet spssmi erscat qkswnd wdsatr ascatw rtovs atovs goesnd \
- gpsipw"
+BUFRLIST_all="uprair adpupa aircar aircft satwnd proflr vadwnd rassda adpsfc \
+ sfcshp sfcbog msonet spssmi erscat qkswnd wdsatr ascatw saldrn rtovs atovs \
+ goesnd gpsipw"
+ 
 ###BUFRLIST_all_array=($BUFRLIST_all) # this does not work on all platforms
 set -A BUFRLIST_all_array `echo $BUFRLIST_all` # this works on all platforms
 
@@ -1961,10 +1962,11 @@ export FORT36=$dump_dir/${BUFRLIST_all_array[13]}
 export FORT37=$dump_dir/${BUFRLIST_all_array[14]}
 export FORT38=$dump_dir/${BUFRLIST_all_array[15]}
 export FORT39=$dump_dir/${BUFRLIST_all_array[16]}
-export FORT41=$dump_dir/${BUFRLIST_all_array[17]}
-export FORT42=$dump_dir/${BUFRLIST_all_array[18]}
-export FORT46=$dump_dir/${BUFRLIST_all_array[19]}
-export FORT48=$dump_dir/${BUFRLIST_all_array[20]}
+export FORT40=$dump_dir/${BUFRLIST_all_array[17]}
+export FORT41=$dump_dir/${BUFRLIST_all_array[18]}
+export FORT42=$dump_dir/${BUFRLIST_all_array[19]}
+export FORT46=$dump_dir/${BUFRLIST_all_array[20]}
+export FORT48=$dump_dir/${BUFRLIST_all_array[21]}
 export FORT51=prepda
 export FORT52=prevents.filtering.prepdata
 
