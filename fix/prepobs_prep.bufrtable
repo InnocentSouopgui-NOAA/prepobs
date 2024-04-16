@@ -28,6 +28,7 @@
 | WDSATR   | A48120 | WINDSAT SCATTEROMETER DATA (REPROCESSED)                 |
 | ASCATW   | A48121 | ASCAT SCATTEROMETER DATA (REPROCESSED)                   |
 | SALDRN   | A48123 | SURFACE MARINE (SAILDRONE) REPORTS
+| UPRAIR   | A48122 | UPPER-AIR (BUFR RAOB, PIBAL, DROPS) REPORTS              |
 *                                                                              |
 *                                                                              |
 * THE FOLLOWING ARE TABLE D ENTRIES FOR SEQUENCES DEFINED IN TABLE A ENTRIES   |
@@ -633,6 +634,8 @@
 | SALDRN   |        {CLOUDSEQ}  {SWELLSEQ}  <VISB2SEQ>  <PSTWXSEQ>  <PKWNDSEQ> |
 | SALDRN   |        <GUST1SEQ>  <CLOU2SEQ>  <XWSPDSEQ>  <WAVE_SEQ>  <SHIP_SEQ> |
 | SALDRN   |        <PTENDSEQ>                                                 |
+| UPRAIR   | HEADR   SIRC       {PRSLEVEL}  <SST_INFO>  <PREWXSEQ>  {CLOUDSEQ} |
+| UPRAIR   |        <CLOU2SEQ>  <SWINDSEQ>  <AFIC_SEQ>  <TURB3SEQ>             |
 |          |                                                                   |
 | HEADR    | SID   207003    XOB    YOB    207000    DHR    ELV    TYP    T29  |
 | HEADR    | TSB   ITP       SQN    PROCN  RPT       TCOR   <RSRD_SEQ>         |
